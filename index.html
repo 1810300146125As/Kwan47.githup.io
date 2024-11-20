@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กำลังใจสำหรับขวัญ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffb3d9, #c2e9fb); /* พื้นหลังไล่สีพาสเทล */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .message {
+            font-size: 1.5em; /* ใช้ขนาดฟอนต์ที่ยืดหยุ่น */
+            color: #fff;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            margin: 10px 0; /* เพิ่มระยะห่างระหว่างข้อความ */
+        }
+
+        .message:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .message:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .message:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        .message:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        .message:nth-child(5) {
+            animation-delay: 8s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .heart {
+            color: #ff69b4; /* สีชมพูสด */
+            font-size: 2em; /* ขยายขนาดหัวใจให้เหมาะสม */
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* รองรับขนาดหน้าจอมือถือ */
+        @media (max-width: 768px) {
+            .message {
+                font-size: 1.2em; /* ลดขนาดฟอนต์บนมือถือ */
+            }
+
+            .heart {
+                font-size: 1.8em; /* ลดขนาดหัวใจบนมือถือ */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message">ขวัญ... </div>
+    <div class="message">อย่าลืมว่า ทุกๆ ความพยายามที่ขวัญทำจะนำพาไปสู่ความสำเร็จ!</div>
+    <div class="message">เรียนหนักแค่ไหน ขวัญก็ทำได้เสมอ!</div>
+    <div class="message">พรุ่งนี้เป็นวันที่ดี ขอให้มีแรงและความตั้งใจเต็มเปี่ยม!</div>
+    <div class="message">ฝันดีนะครับ ขวัญ พรุ่งนี้ไปลุยกันให้เต็มที่! <span class="heart">❤️</span></div>
+
+</body>
+</html>
